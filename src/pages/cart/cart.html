@@ -1,0 +1,61 @@
+<ion-header >
+
+    <img src="assets/img/payment.png" style="display:block;width:100%;height:30%;margin-left:auto;margin-right:auto;" />
+</ion-header>
+
+
+<ion-content class="bg-style">
+    
+        <ion-list>
+
+        <ion-item  *ngFor="let item of cart">
+          
+            <ion-thumbnail item-left>            
+            <img src="{{item.image}}">
+            </ion-thumbnail>
+            <h2><b>{{item.name}}</b></h2>
+            <p>${{item.price}} x {{item.quantity}} = ${{item.price * item.quantity}}</p>
+            
+            <button ion-button clear  (click)="increment(item)" >
+              <ion-icon color="positive" style=" font-size: 25px;" name="ios-arrow-dropup-circle"></ion-icon>
+            </button>
+            
+            <button ion-button clear (click)="decrement(item)" >
+              <ion-icon color="positive" style=" font-size: 25px;" name="ios-arrow-dropdown-circle"></ion-icon>
+            </button>
+            
+            <button style=" font-size: 20px;" ion-button clear  (click)="remove(item)">
+              <ion-icon color="positive" name="ios-remove-circle"></ion-icon>
+            </button>
+
+            
+        </ion-item>
+        <ion-item *ngIf="cartAmount>=0">
+            <ion-textarea placeholder="Add a note (More sauce)"></ion-textarea>
+        </ion-item>
+        <ion-item >
+            <h2>SubTotal</h2> 
+            <h2 item-right >${{cartAmount}}</h2>
+        </ion-item>
+        <ion-item >
+            <h2>GST</h2> 
+            <h2 item-right >${{GST}}</h2>
+        </ion-item>
+        <ion-item >
+            <h2>Grand Total</h2> 
+            <h2 item-right >${{grandtotal}}</h2>
+        </ion-item>
+          
+        <ion-item *ngIf="cartAmount==0">
+          <h2 class="center">Cart is empty!</h2>       
+        </ion-item>
+        
+        <button fixed ion-button icon-start block color="light" (click)="checkout()">
+            <ion-icon name="ios-cart"></ion-icon>
+            Make Payment!
+        </button>    
+
+        </ion-list>
+
+    
+    </ion-content>

@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons start>
+      <button ion-button icon-left>
+        <ion-icon name="arrow-back"></ion-icon>
+        Login
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <form>
+
+    <ion-list>
+
+      <ion-item>
+
+        <ion-label>
+
+          Name
+
+        </ion-label>
+
+        <ion-input type="text" placeholder="" [(ngModel)]="user.name" name="name"></ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label>
+
+          Email
+
+        </ion-label>
+
+        <ion-input type="email" placeholder="" [(ngModel)]="user.email" name="email"></ion-input>
+
+      </ion-item>
+
+      <ion-item>
+
+        <ion-label>
+
+          Password
+
+        </ion-label>
+
+        <ion-input type="password" placeholder="" [(ngModel)]="user.password" name="password"></ion-input>
+
+      </ion-item>
+
+    </ion-list>
+
+    <div ion-text padding-left color="danger"> {{signupError}} </div>
+
+    <button ion-button color="positive" block type="submit" (click)="signup()">
+
+      Sign up
+
+    </button>
+
+  </form>
+
+</ion-content>

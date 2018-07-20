@@ -1,0 +1,93 @@
+
+
+<ion-header><img src="assets/img/menu.png" style="display:block;width:100%;height:30%;margin-left:auto;margin-right:auto;" /></ion-header>
+<ion-content padding id="page1">
+  
+  
+  <div id="menu-container2"></div>
+ 
+  <button style="float:right"><img src="assets/img/smaller cart.png" (click) = "goCartPage()"></button>
+
+  <ion-list id="menu-list3">
+    <ion-item id="menu-select1">
+      <ion-label>
+        <b>Menu</b>
+      </ion-label>
+      <ion-select name="">
+        <ion-option>
+          Beer Can chicken
+        </ion-option>
+        <ion-option>
+          Truffled Lobster Mac &amp; Cheese
+        </ion-option>
+        <ion-option>
+          Steak &amp; Eggs
+        </ion-option>
+      </ion-select>
+    </ion-item>
+<ion-item>
+    <p style="margin-top:0px;color:#000000; font-size: 15px">
+        Signatures
+      </p>
+</ion-item>
+    <ion-item id="menu-list-item-container2" (click)="goBeerChickenPage()">
+         <ion-thumbnail item-end>
+          <img  src="assets/img/beercanchicken.png">
+        </ion-thumbnail>
+    
+          <p style="color:#000000;">
+          Beer Can Chicken (Serves 2-3)
+        </p>
+        <br>
+        <p style="color:#000000;">
+          Roasted whole chicken, roasted 
+
+        </p>
+        <p style="color:#000000;">
+            vegetables(Prep time is 
+        </p>
+        <p style="color:#000000;">approximately 40 minutes)</p>
+        <p style="color:#000000;">
+          $58
+        </p>
+    
+    </ion-item>
+    <ion-item id="menu-list-item-container3"(click)="goLobsterMacPage()">
+     
+        <p style="margin-top:0px;color:#000000;">
+          Truffled Lobster Mac &amp; Cheese
+        </p>
+     
+           <ion-thumbnail item-end> <img src="assets/img/lobster.png">   </ion-thumbnail>
+           <p style="color:#000000;"> Half Maine lobster, truffle mac   </p>
+        <p style="color:#000000;">&amp; cheese</p>
+        <p style="color:#000000;">
+          $48
+        </p>
+   
+    </ion-item>
+    <ion-item id="menu-list-item-container4" (click)="goSteakEggsPage()">
+      
+        <p style="margin-top:0px;color:#000000;">
+          Steak &amp; Eggs
+        </p>
+      
+           <ion-thumbnail item-end> <img src="assets/img/steak n eggs.png"> </ion-thumbnail>
+           <p style="color:#000000;">
+           USDA 250g angus ribeye, 
+        </p>
+        <p style="color:#000000;">
+
+            sunny-side up egg, housemade 
+
+          </p>
+          <p style="color:#000000;">
+             steak sauce, OE fries
+          </p>
+        <p style="color:#000000;">
+          $48
+        </p>
+     
+    </ion-item>
+  </ion-list>
+</ion-content>

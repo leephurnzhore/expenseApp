@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+   
+   
+    <ion-title>
+      View Expenses
+    </ion-title>
+    
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let expenseItem of expenses">
+      <ion-item color="none">
+        <h1> {{expenseItem.merchant}} </h1>
+        <p> ${{expenseItem.amount}} </p>
+        <p> {{expenseItem.category}} </p>
+
+        <ion-icon item-end color="primary" name="{{expenseItem.favIcon}}" (click)="toggleFav(expenseItem)"></ion-icon>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="deleteItem(expenseItem)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+  </ion-list>
+</ion-content>

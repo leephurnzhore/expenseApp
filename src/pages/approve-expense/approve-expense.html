@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    
+    <ion-title>
+      Approve Expense
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+  <ion-card *ngFor="let item of expenses">
+
+    <ion-list>
+
+      <ion-item color="none" id="approveExpense-list-item10">
+
+        <ion-avatar item-left>
+
+          <img src="assets/img/X63k8K9SJKBRn00ujk3n_profile-female.jpg" />
+
+        </ion-avatar>
+
+        <h2>
+
+          Amy
+
+        </h2>
+
+      </ion-item>
+
+      <ion-item color="none">
+
+        <p> <strong> ${{item.amount}} {{item.category}}</strong> </p>
+
+        <p> {{item.merchant}} </p>
+
+        <p> {{item.notes}} </p>
+
+      </ion-item>
+
+      <button (click)="approveExpense(item)" ion-button outline color="positive">
+
+        Approve
+
+      </button>
+
+      <button (click)="rejectExpense(item)" ion-button outline color="positive">
+
+        Reject
+
+      </button>
+
+    </ion-list>
+
+  </ion-card>
+
+</ion-content>

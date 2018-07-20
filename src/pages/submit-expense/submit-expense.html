@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+   
+    <ion-title>
+      Submit Expense
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page2">
+  <form #submitExpenseForm="ngForm">
+    <ion-item id="submitExpense-input1">
+      <ion-label>
+        Date
+      </ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="expense.date" name="date"> </ion-datetime>
+    </ion-item>
+    <ion-item id="submitExpense-input2">
+      <ion-label>
+        Amount
+      </ion-label>
+      <ion-input type="number" placeholder="" [(ngModel)]="expense.amount" name="amount">></ion-input>
+    </ion-item>
+    <p ion-text *ngIf="expense.amount <= 0 && submitted == true" color="danger" padding-left>
+      Amount is invalid
+    </p>
+
+    <ion-item id="submitExpense-select1">
+      <ion-label>
+        Category
+      </ion-label>
+      <ion-select [(ngModel)]="expense.category" name="category">
+        <ion-option *ngFor="let cat of categories" [value]="cat">
+          {{cat}}
+        </ion-option>
+
+        <ion-option>
+          Transport
+        </ion-option>
+        <ion-option>
+          Food
+        </ion-option>
+        <ion-option>
+          Accomodation
+        </ion-option>
+        <ion-option>
+          Others
+        </ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item id="submitExpense-input3">
+      <ion-label>
+        Merchant
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="expense.merchant" name="merchant" #merchant="ngModel" required></ion-input>
+    </ion-item>
+    <p ion-text *ngIf="merchant.invalid && submitted == true" color="danger" padding-left>
+      Merchant is required
+    </p>
+
+    <ion-item id="submitExpense-textarea1">
+      <ion-label>
+        Notes
+      </ion-label>
+      <ion-textarea placeholder="" [(ngModel)]="expense.notes" name="notes">></ion-textarea>
+    </ion-item>
+    You have entered: {{testing}}
+
+    <button id="submitExpense-button1" ion-button color="positive" blocktype="submit" (click)="onSubmit(submitExpenseForm)">
+      Submit
+    </button>
+  </form>
+</ion-content>
