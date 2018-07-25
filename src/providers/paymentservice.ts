@@ -10,14 +10,14 @@ import { Expense } from '../models/expense';
 
 import { AuthService } from './auth-service';
 import { paymentdetails } from '../models/paymentdetails';
-
+import {Cart} from '../models/cart';
 
 
 @Injectable()
 
 export class paymentservice {
 
-  paymentlist: paymentdetails[]; // Stores the expense list for search functionality
+  paymentlist: Cart[]; // Stores the expense list for search functionality
 
 
 
@@ -65,7 +65,7 @@ export class paymentservice {
 
 
 
-  searchItems(val: string): paymentdetails[] {
+  searchItems(val: string): Cart[] {
 
     if (!val || !val.trim()) {
 
@@ -83,15 +83,15 @@ export class paymentservice {
 
     // esp when user types character by charcter in search bar
 
-   /** return this.paymentlist.filter(item =>
+    return this.paymentlist.filter(item =>
 
-      item.merchant.toLowerCase().includes(val) ||
+      item.name.toLowerCase().includes(val) ||
 
-      item.category.toLowerCase().includes(val) ||
+      item.category.toLowerCase().includes(val)) ;
 
-      item.notes && item.notes.toLowerCase().includes(val));
+     // item.price && item.price.toLowerCase().includes(val));
 
-  } **/
+  
 
   }
 

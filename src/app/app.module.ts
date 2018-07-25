@@ -27,7 +27,8 @@ import { BeerChickenPage } from '../pages/beerchicken/beerchicken';
 import { CartService } from '../providers/cart.service';
 import { PaymentPage } from '../pages/payment/payment';
 import { paymentservice } from '../providers/paymentservice';
-
+import {ReviewTransactionPage} from '../pages/review-transaction/review-transaction';
+import { ConfirmpaymentPage } from '../pages/confirmpayment/confirmpayment';
 
 // import { GooglePlus } from '@ionic-native/google-plus';
 export const firebaseConfig = {
@@ -54,7 +55,9 @@ export const firebaseConfig = {
     LobsterMacPage,
     BeerChickenPage,
     CartPage,
-    PaymentPage
+    PaymentPage,
+    ReviewTransactionPage,
+    ConfirmpaymentPage
     
   ],
   imports: [
@@ -80,7 +83,9 @@ export const firebaseConfig = {
     LobsterMacPage,
     BeerChickenPage,
     CartPage,
-    PaymentPage
+    PaymentPage,
+    ReviewTransactionPage,
+    ConfirmpaymentPage
   ],
   providers: [
     StatusBar,

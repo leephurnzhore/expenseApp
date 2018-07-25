@@ -3,6 +3,8 @@ import { NavController } from 'ionic-angular';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
 import { paymentdetails} from '../../models/paymentdetails';
 import { paymentservice } from '../../providers/paymentservice';
+import { ReviewTransactionPage } from '../review-transaction/review-transaction';
+import { MenuPage } from '../menu/menu';
 
 @Component({
   selector: 'page-payment',
@@ -54,8 +56,16 @@ else{
         + "\n month: " + this.payment.month
         + "\n year: " + this.payment.year
         + "\n verificationcode: " + this.payment.verificationcode);
+        this.navCtrl.push(ReviewTransactionPage);
 
-    }}
+    }
+  }
+
+
+    Cancel() : void {
+      this.navCtrl.push(ReviewTransactionPage);
+    }
+  
   }
 
 
