@@ -29,7 +29,11 @@ import { PaymentPage } from '../pages/payment/payment';
 import { paymentservice } from '../providers/paymentservice';
 import {ReviewTransactionPage} from '../pages/review-transaction/review-transaction';
 import { ConfirmpaymentPage } from '../pages/confirmpayment/confirmpayment';
+import { TableReservationsPage } from '../pages/table-reservations/table-reservations';
+import { TableReservation } from '../models/TableReservation';
+import { TableReservationService } from '../providers/TableReservationService';
 
+// import {TableReservationService} from '../providers/TableReservationService';
 // import { GooglePlus } from '@ionic-native/google-plus';
 export const firebaseConfig = {
   apiKey: "AIzaSyDiHqvaW35ClJLGvd5WbaLl015UPrc5V2g",
@@ -57,7 +61,8 @@ export const firebaseConfig = {
     CartPage,
     PaymentPage,
     ReviewTransactionPage,
-    ConfirmpaymentPage
+    ConfirmpaymentPage,
+    TableReservationsPage,
     
   ],
   imports: [
@@ -85,7 +90,8 @@ export const firebaseConfig = {
     CartPage,
     PaymentPage,
     ReviewTransactionPage,
-    ConfirmpaymentPage
+    ConfirmpaymentPage,
+    TableReservationsPage,
   ],
   providers: [
     StatusBar,
@@ -94,6 +100,7 @@ export const firebaseConfig = {
     AuthService,
     CartService,
      paymentservice,
+     TableReservationService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

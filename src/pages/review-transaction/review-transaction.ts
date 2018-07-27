@@ -8,6 +8,7 @@ import {paymentservice} from '../../providers/paymentservice'
 import {AuthService} from '../../providers/auth-service';
 
 import { ConfirmpaymentPage } from '../confirmpayment/confirmpayment';
+import { TableReservationsPage } from '../table-reservations/table-reservations';
 @Component({
   selector: 'page-review-transaction',
   templateUrl: 'review-transaction.html'
@@ -37,26 +38,7 @@ export class ReviewTransactionPage implements OnInit  {
 
   constructor(public navCtrl: NavController,  public CartService: CartService,public  authService: AuthService ) {
   }
-  
- /** ngOnInit() {
 
-    if (status = "pending") {
-      this.CartService.getItems()
-
-        .subscribe(cartItems => {
-
-          this.cartItems = cartItems;
-        }
-
-        );
-    }
-    else {
-
-     
-
-    }
-  }**/
-  
 
   ngOnInit() {
     this.cartAmount=0;
