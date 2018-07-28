@@ -1,68 +1,40 @@
 
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-buttons start>
-      <button ion-button icon-left>
-        <ion-icon name="arrow-back"></ion-icon>
-        Login
-      </button>
-    </ion-buttons>
-    <ion-title>
-      Signup
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
 <ion-content padding class= "abc">
-	<div class="logo"></div>
-  <form>
+	<img src ='../../assets/img/White Logo.png' class="logo"/>
+	
+	<div class="float">
+	 <button class="signin">Sign In</button>
+	<div class="line"></div>
+	<button class="signup">Sign Up</button>
+	</div>	
+	
+  <form class="formtest">
+	
+    <ion-list class="formtesting">
 
-    <ion-list>
 
-      <ion-item>
+        <ion-input type="text" placeholder="Full Name" [(ngModel)]="user.name" name="name" class="formbackground"></ion-input>
 
-        <ion-label>
 
-          Name
+        <ion-input type="email" placeholder="Email" [(ngModel)]="user.email" name="email" class="formbackground2"></ion-input>
 
-        </ion-label>
-
-        <ion-input type="text" placeholder="" [(ngModel)]="user.name" name="name"></ion-input>
-
-      </ion-item>
-
-      <ion-item>
-
-        <ion-label>
-
-          Email
-
-        </ion-label>
-
-        <ion-input type="email" placeholder="" [(ngModel)]="user.email" name="email"></ion-input>
-
-      </ion-item>
-
-      <ion-item>
-
-        <ion-label>
-
-          Password
-
-        </ion-label>
-
-        <ion-input type="password" placeholder="" [(ngModel)]="user.password" name="password"></ion-input>
-
-      </ion-item>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="user.password" name="password" class="formbackground3"></ion-input>
+		
 
     </ion-list>
+	  
+	 <div class="agreebox">
+	 <label class="container">I agree with all the terms & conditions
+		 <input type="checkbox" checked="checked">
+		 <span class="checkmark"></span>
+	</label>
+	  
+	 </div>
 
     <div ion-text padding-left color="danger"> {{signupError}} </div>
 
-    <button ion-button color="positive" block type="submit" (click)="signup()">
+    <button ion-button color="positive" block type="submit" (click)="signup()" class="signupbutton">
 
       Sign up
 

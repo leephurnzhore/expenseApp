@@ -1,9 +1,150 @@
 page-signup {
-	.logo
-{
-	background-image:url("../../assets/img/White Logo.png"); 
-}
+
 }
 .abc{
 		background-image:url("../../assets/img/LoginBackground.png");
 	}
+
+.logo{margin-left:40px;margin-top:50px;width:220px;height:54px;}
+
+
+.float
+{
+	width:260px;height:20px;margin-top:50px;
+}
+.signin
+{
+	color:black;
+	font-size:18px;
+	font-family:"Century Gothic";
+	float:left;
+	margin-top:5px;
+	opacity:0.6;
+}
+.signup
+{
+	color:black;
+	font-size:18px;
+	font-family:"Century Gothic";
+	float:left;
+	margin-top:5px;
+	opacity:0.6;
+	margin-left:20px;
+}
+.line
+{
+	width:2px;height:35px;background-color:white;float:left;margin-left:20px; 
+}
+.formbackground
+{
+	border-bottom:2px solid white;
+	margin-top:70px;
+  font-size: 14px;
+	font-family:"Century Gothic";
+	font-weight:bold;
+  color: white;
+}
+.formbackground2
+{
+	border-bottom:2px solid white;
+	margin-top:30px;
+  font-size: 14px;
+	font-family:"Century Gothic";
+	font-weight:bold;
+  color: white;
+}
+
+.formbackground3
+{
+	border-bottom:2px solid white;
+	margin-top:30px;
+  font-size: 14px;
+	font-family:"Century Gothic";
+	font-weight:bold;
+  color: white;
+}
+.signupbutton
+{
+	background-color:#00A2BD;
+	border-radius:25px;
+	font-family: "Century Gothic";
+	font-style:italic;
+	font-size:15px;
+	margin-top:20px;
+}
+
+  input[type=text].formbackground::placeholder {
+    color: white;
+    opacity: 1;
+    font-size: 14px;
+  }
+
+.agreebox
+{
+	width:250px;height:20px;
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 11px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	color:white;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #00A2BD;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #00A2BD;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #00A2BD;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 4px;
+    top: 2px;
+    width: 3px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
