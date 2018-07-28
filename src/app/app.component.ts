@@ -14,6 +14,7 @@ import { AuthService } from '../providers/auth-service';
 
 import { LoginPage } from '../pages/login/login';
 import { MenuPage } from '../pages/menu/menu';
+import { ReviewTransactionPage } from '../pages/review-transaction/review-transaction';
 
 
 
@@ -50,7 +51,11 @@ export class MyApp {
   } goToProfile(params) {
     if (!params) params = {};
     this.navCtrl.setRoot(ProfilePage);
+  } Cancel(params) {
+    if (!params) params = {};
+    this.navCtrl.setRoot(ReviewTransactionPage);
   }
+  
   logout() {
 
     this.authService.logout();

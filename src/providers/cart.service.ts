@@ -3,7 +3,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import 'rxjs/add/operator/first';
 import 'rxjs/add/operator/take';
 import { Observable } from 'rxjs';
-import {Cart} from '../models/cart'
+import {Cart} from '../models/cart';
 import { map } from 'rxjs/operators';
 import { AuthService } from './auth-service';
 import { ApproveExpensePage } from '../pages/approve-expense/approve-expense';
@@ -108,7 +108,63 @@ export class CartService {
 
   }
 
-  // loadOrders(userid: string) {
-  //   this.orderItems = this.db.list('orders/' + userid);
-  // }
+ 
+  getItems(): Observable<any[]> {
+
+    let expenseObservable: Observable<any[]>;
+
+
+
+    expenseObservable = this.db.list('/cartItem/').snapshotChanges().pipe(
+
+      map(changes =>
+
+        changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))));
+
+
+
+    expenseObservable.subscribe(result => {
+
+      this.cartItems = result;
+
+    });
+
+    return expenseObservable;
+
+  }
+  searchItems(val: string): Cart[] {
+
+    if (!val || !val.trim()) {
+
+      // if no search term, return all expenses.
+
+      return this.cartItems;
+
+    }
+
+    val = val.toLowerCase();
+
+
+
+    // Filter locally instead of invoking multiple calls to server
+
+    // esp when user types character by charcter in search bar
+
+    return this.cartItems.filter(item =>
+
+      item.name.toLowerCase().includes(val) ||
+
+      item.category.toLowerCase().includes(val)) ;
+
+     // item.price && item.price.toLowerCase().includes(val));
+
+  
+
+  }
+  
+  removeItem(item) {
+
+    this.db.list('/cartItem/').remove(item.key);
+
+  }
 }

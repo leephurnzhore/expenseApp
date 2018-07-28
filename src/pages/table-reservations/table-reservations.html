@@ -1,0 +1,73 @@
+
+<ion-header >
+
+    <img src="assets/img/reservations.png" style="display:block;width:100%;height:30%;margin-left:auto;margin-right:auto;" />
+  </ion-header>
+<ion-content padding id="page8">
+  
+    <ion-item id="tableReservations-select2" >
+        <ion-label color="primary" stacked>Choose the table</ion-label>
+      
+          <ion-select [(ngModel)]="reservation.tableno" name="tableno" >
+            <ion-option>Table 52</ion-option>
+            <ion-option>Table 25</ion-option>
+            <ion-option>Table 42</ion-option>
+            <ion-option>Table 34</ion-option>
+            <ion-option>Table 5</ion-option>
+            <ion-option>Table 21</ion-option>
+          </ion-select>
+     </ion-item>
+ 
+    <ion-item id="tableReservations-select3">
+        <ion-label color="primary" stacked>Booking date</ion-label>
+      
+      <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="reservation.bookingdate" name="date"> </ion-datetime>
+     
+    </ion-item>
+  
+    <ion-item id="tableReservations-select4">
+        <ion-label color="primary" stacked>People</ion-label>
+       
+      <ion-select [(ngModel)]="reservation.people" name="people" >
+       
+              <ion-option>1</ion-option>
+              <ion-option>2</ion-option>
+              <ion-option>3</ion-option>
+              <ion-option>4</ion-option>
+              <ion-option>5</ion-option>
+              <ion-option>6</ion-option>
+       
+      </ion-select>
+    </ion-item>
+    
+    <ion-item id="tableReservations-select5">
+     
+        <ion-label color="primary" stacked>Adults</ion-label>
+    
+          <ion-select [(ngModel)]="reservation.adults" name="adults" >
+              <ion-option>1</ion-option>
+              <ion-option>2</ion-option>
+              <ion-option>3</ion-option>
+              <ion-option>4</ion-option>
+              <ion-option>5</ion-option>
+              <ion-option>6</ion-option>
+            </ion-select>
+     
+    </ion-item>
+  
+    <ion-item id="tableReservations-select6">
+        <ion-label color="primary" stacked>Children</ion-label>
+        
+   
+          <ion-select [(ngModel)]="reservation.children" name="children" >
+              <ion-option>1</ion-option>
+              <ion-option>2</ion-option>
+              <ion-option>3</ion-option>
+              <ion-option>4</ion-option>
+              <ion-option>5</ion-option>
+              <ion-option>6</ion-option>
+            </ion-select>
+     
+    </ion-item>
+    <button fixed ion-button icon-start block color="positive" blocktype="submit" (click)="onSubmit(submittablereservations)" >Confirm Table</button>
+</ion-content>

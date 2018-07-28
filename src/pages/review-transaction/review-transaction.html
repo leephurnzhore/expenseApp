@@ -1,0 +1,50 @@
+<ion-header >
+
+  <img src="assets/img/reviewtransactions.png" style="display:block;width:100%;height:30%;margin-left:auto;margin-right:auto;" />
+</ion-header>
+
+<ion-content padding id="page6">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list >
+    
+    <ion-item-sliding *ngFor="let cartItem of cartItems">
+      <ion-item color="none">
+          <ion-thumbnail item-left>            
+              <img src="{{cartItem.image}}">
+              </ion-thumbnail>
+        <h1> {{cartItem.name}} </h1>
+        <p>Quantity: {{cartItem.quantity}} </p>
+        
+       <p>Total price: ${{cartItem.price * cartItem.quantity}}</p>
+      </ion-item>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="deleteItem(cartItem)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+<ion-item >
+    <h2>SubTotal</h2> 
+    <h2 item-right >${{cartAmount}}</h2>
+</ion-item>
+<ion-item >
+    <h2>GST</h2> 
+    <h2 item-right >${{GST}}</h2>
+</ion-item>
+<ion-item >
+    <h2>Grand Total</h2> 
+    <h2 item-right >${{grandtotal}}</h2>
+</ion-item>
+  
+<ion-item *ngIf="cartAmount==0">
+  <h2 class="center">Cart is empty!</h2>       
+</ion-item>
+<button fixed ion-button icon-start block color="light" (click)="confirmpayment()">
+  <ion-icon name="ios-cart"></ion-icon>
+  Continue
+</button>    
+
+</ion-content>
