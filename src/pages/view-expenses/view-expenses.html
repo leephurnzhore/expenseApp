@@ -1,25 +1,18 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-   
-   
-    <ion-title>
-      View Expenses
-    </ion-title>
-    
-  </ion-navbar>
+  <img src="../../assets/img/Group 60.png" style="display:block;width:100%;height:231px;margin-left:auto;margin-right:auto;" />
 </ion-header>
-<ion-content padding>
-  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+<ion-content class="backgroundpage">
+  <ion-searchbar (ionInput)="getItems($event)" class="searchbox"></ion-searchbar>
   <ion-list>
-
+	
+	  <div class="lineorders"></div>
+	  <h1 class="currentorders">Your Current Orders : 3</h1>
+	   <div class="lineorders2"></div>
     <ion-item-sliding *ngFor="let expenseItem of expenses">
       <ion-item color="none">
-        <h1> {{expenseItem.merchant}} </h1>
-        <p> ${{expenseItem.amount}} </p>
-        <p> {{expenseItem.category}} </p>
+        <h1 class="item"> Order Number :  {{expenseItem.merchant}} </h1>
+        <p class="itema"> ${{expenseItem.amount}} </p>
+        <p class="itema"> {{expenseItem.category}} </p>
 
         <ion-icon item-end color="primary" name="{{expenseItem.favIcon}}" (click)="toggleFav(expenseItem)"></ion-icon>
       </ion-item>
