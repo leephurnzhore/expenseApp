@@ -10,3 +10,73 @@ page-beerchicken {
         margin: -50px auto 10px; 
       }
 }
+
+.boxdetails
+{
+	padding: 10px;
+    box-shadow: 2px 5px #888888;
+}
+.beerline
+{
+	width:105.5px;
+	height:2px;
+	background-color:#CECECE;
+	margin-left:100px;
+	margin-top:-10px;
+}
+.beerdetails
+{
+	color:#000000;
+	font-size:13px;
+	font-family:'Century Gothic';
+	width:250px;
+	margin-left:25px;
+	line-height: 1.6;
+}
+.beerspecialrequest
+{
+	color:#000000;
+	font-size:13px;
+	font-family:'Century Gothic';
+	font-style:italic; 
+}
+  input[type=text].beerplaceholder::placeholder {
+    color: black;
+    opacity: 1;
+    font-size: 9px;
+  }
+i.beerprice
+{
+	color:#000000;
+	font-size:15px;
+	font-family:'Century Gothic';
+	font-weight:bold;
+}
+p.updownbox
+{
+	width:100px;
+	height:40px;
+	border-radius:12px;
+	border:1px solid #1295AC;
+	margin-left:95px;
+}
+.minus
+{
+	margin-top:-10px;
+	margin-left:-5px;
+}
+.plus
+{
+	margin-top:-5px;
+	margin-left:1px;
+}
+.addtocart
+{
+	width:100%;
+	background-color:#44A6B7;
+	margin-top:25px;
+	color:white;
+	font-family:"Century Gothic";
+	font-size:14px;
+	font-weight:bold;
+}

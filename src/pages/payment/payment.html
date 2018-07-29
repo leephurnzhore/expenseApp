@@ -1,32 +1,22 @@
 <ion-header >
 
-  <img src="assets/img/payment1.JPG" style="display:block;width:100%;height:30%;margin-left:auto;margin-right:auto;" />
+  <img src="../../assets/img/Group 58.png" style="display:block;width:100%;height:89px;margin-left:auto;margin-right:auto;" />
 </ion-header>
 
 <ion-content padding id="page5">
   <div id="payment-markdown13" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
+    <p style="color:#000000;font-size:15px;font-weight:bold;font-family:'Century Gothic';">
       Credit / Debit Cart
     </p>
     <img src="assets/img/creditcard.JPG" style="display:block;width:100%;height:30%;margin-left:auto;margin-right:auto;" />
   </div>
   <form id="payment-form6">
-    <ion-item id="payment-input2">
-      <ion-label>
-        Credit Card Number
-      </ion-label>
-      <ion-input type="text" placeholder="" [(ngModel)]="payment.creditcardnumber" name="creditcardnumber"></ion-input>
-    </ion-item>
-    <ion-item id="payment-input3">
-      <ion-label>
-        Name on Credit Card
-      </ion-label>
-      <ion-input type="text" placeholder="" [(ngModel)]="payment.nameoncreditcard" name="nameoncreditcard"></ion-input>
-    </ion-item>
+      <ion-input type="text" placeholder="Credit Card Number" [(ngModel)]="payment.creditcardnumber" name="creditcardnumber" class="creditcardnumber"></ion-input>
+ 
+      <ion-input type="text" placeholder="Name on Credit Card" [(ngModel)]="payment.nameoncreditcard" name="nameoncreditcard" class="creditcardnumber"></ion-input>
     <ion-item id="payment-input4">
-        <ion-label>Month</ion-label>
         
-            <ion-select [(ngModel)]="payment.month" name="Month">
+            <ion-select [(ngModel)]="payment.month" name="Month" placeholder="Month" class="creditcardnumber">
                 <ion-option *ngFor="let M of month" [value]="M">
                   {{M}}
                 </ion-option>
@@ -46,33 +36,23 @@
       
       
     </ion-item>
-    <ion-item id="payment-input5">
-      <ion-label>
-        Year
-      </ion-label>
-      <ion-input type="text" placeholder=""[(ngModel)]="payment.year" name="year"></ion-input>
-    </ion-item>
-
-    
-    <ion-item id="payment-input6">
-      <ion-label>
-        Verification Code
-      </ion-label>
-      <ion-input type="text" placeholder=""[(ngModel)]="payment.verificationcode" name="verificationcode" ></ion-input>
-    </ion-item>
+  
+      <ion-input type="text" placeholder=" Year"[(ngModel)]="payment.year" name="year" class="creditcardnumber"></ion-input>
+	  
+      <ion-input type="text" placeholder=" Verification Code"[(ngModel)]="payment.verificationcode" name="verificationcode" class="creditcardnumber" ></ion-input>
 
 
-    <ion-item id="payment-checkbox1">
+    <ion-item id="payment-checkbox1" class="monthcreditcard">
       <ion-label>
         Save my card information
       </ion-label>
       <ion-checkbox></ion-checkbox>
     </ion-item>
   </form>
-  <button id="payment-button1" ion-button color="positive"  blocktype="submit" (click)="onSubmit(submitcarddetails)">
+  <button id="payment-button1" ion-button color="positive"  blocktype="submit" (click)="onSubmit(submitcarddetails)" class="continuebutton">
     Continue
   </button>
-  <button id="payment-button2" ion-button color="positive" (click) = "Cancel()">
+  <button id="payment-button2" ion-button color="positive" (click) = "Cancel()" class="cancelbutton">
     Cancel
   </button>
 </ion-content>

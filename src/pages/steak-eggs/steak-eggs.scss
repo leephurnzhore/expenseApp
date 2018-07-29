@@ -1,3 +1,44 @@
 page-steak-eggs {
 
 }
+.boxdetails
+{
+	padding: 10px;
+    box-shadow: 2px 5px #888888;
+}
+.steakline
+{
+	width:105.5px;
+	height:2px;
+	background-color:#CECECE;
+	margin-left:100px;
+	margin-top:-10px;
+}
+.steakdetails
+{
+	color:#000000;
+	font-size:13px;
+	font-family:'Century Gothic';
+	width:250px;
+	margin-left:25px;
+	line-height: 1.6;
+}
+.steakspecialrequest
+{
+	color:#000000;
+	font-size:13px;
+	font-family:'Century Gothic';
+	font-style:italic; 
+}
+  input[type=text].beerplaceholder::placeholder {
+    color: black;
+    opacity: 1;
+    font-size: 9px;
+  }
+i.steakprice
+{
+	color:#000000;
+	font-size:15px;
+	font-family:'Century Gothic';
+	font-weight:bold;
+}

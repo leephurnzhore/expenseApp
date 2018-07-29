@@ -1,3 +1,126 @@
 page-cart {
 
 }
+
+p.recommendation
+{
+	font-size:10px;
+	font-family:"Century Gothic";
+	width:300px;
+	margin-left:15px;
+}
+.bgstyle
+{
+	width:100%;
+	height:206px;
+	background-color:#F1F1F1;
+}
+.boxbox
+{
+	width:100%;
+	height:70px;
+}
+.lobstertotsbox
+{
+	width:169px;
+	height:70px;
+	background-image:url("../../assets/img/Rectangle 21.png");
+	margin-left:0px;
+	margin-top:-5px;
+	padding-bottom:10px;
+	float:left;
+}
+h1.lobstertitle
+{
+	font-size:11px;
+	font-weight:bold;
+	font-family:"Century Gothic";
+	position:relative;
+	top:-10px;
+	left:15px;
+}
+p.lobstersubtitle
+{
+	font-size:9px;
+	font-family:"Century Gothic";
+	position:relative;
+	top:-15px;
+	left:15px;
+}
+p.lobsterprice
+{
+	font-size:9px;
+	font-weight:bold;
+	font-family:"Century Gothic";
+	position:relative;
+	top:-10px;
+	left:15px;
+}
+.lobsterpicture
+{
+	width:43px;
+	height:50px;
+	position:relative;
+	top:-70px;
+	left:115px;
+}
+.friesbox
+{
+	width:169px;
+	height:70px;
+	background-image:url("../../assets/img/Rectangle 21.png");
+	margin-left:5px;
+	margin-top:-10px;
+	padding-bottom:10px;
+	position: relative;
+	top:-5px;
+	left:160px;
+}
+h1.friestitle
+{
+	font-size:11px;
+	font-weight:bold;
+	font-family:"Century Gothic";
+	position:relative;
+	top:-55px;
+	left:15px;
+}
+p.friessubtitle
+{
+	font-size:9px;
+	font-family:"Century Gothic";
+	position:relative;
+	top:-60px;
+	left:17px;
+}
+p.friesprice
+{
+	font-size:9px;
+	font-weight:bold;
+	font-family:"Century Gothic";
+	position:relative;
+	top:-55px;
+	left:17px;
+}
+.friespicture
+{
+	width:43px;
+	height:50px;
+	position:relative;
+	top:-115px;
+	left:100px;
+}
+h2.subcarttile
+{
+	font-size:11px;
+	font-weight: bold;
+	font-family:"Century Gothic";
+	color:black;
+}
+h2.carttile
+{
+	font-size:13px;
+	font-weight: bold;
+	font-family:"Century Gothic";
+	color:black;
+}
